@@ -3,6 +3,7 @@
 #include <math.h>
 #include <stdio.h>
 #include "myPolygon.h"
+#include <cstdlib>
 // Do³¹cz definicje biblioteki Allegro
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
@@ -14,8 +15,8 @@ const int SCREEN_H = 480;	//wysokoœæ okna
 #define NKAT 4
 
 // Funkcja g³ówna
-int main()
-{
+int main(){
+	srand(time(NULL));
 	ALLEGRO_DISPLAY *display = NULL;			//okno
 	ALLEGRO_EVENT_QUEUE *event_queue = NULL;	//kolejka zdarzen
 	ALLEGRO_TIMER *timer = NULL;				//timer, od ktorego bêdziemy odbierac zdarzenia (potrzebny do animacji)
